@@ -25,7 +25,7 @@ final class MessageLoggerMiddleware implements MiddlewareInterface
         $message = $this->messageFromEnvelope($envelope);
         $context = [
             'message' => $message,
-            'name' => $message::messageName(),
+            'name' => $message->messageName(),
         ];
 
         try {
